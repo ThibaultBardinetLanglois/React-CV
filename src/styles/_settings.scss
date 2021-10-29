@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+$font: 'Lato';
+$font-weight-1: 300;
+$font-weight-2: 400;
+$font-weight-3: 700;
+
+$color-1 : #FCCBA0;
+$color-2: #FFBB98;
+$color-3: #7D8E95;
+$color-4: #344648;
+$color-5: #F2845F;
+
+$white: #f6f5f1;
+$black: #333333;
+
+$border-radius: 25px;
+$shadow: 0 1px 3px #333;
+
+@mixin verticalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: $font;
+    background-color: $white;
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+    @include verticalCenter;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    @include verticalCenter;
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: $color-4;
+    &:visited {
+        color: $color-4;
+    }
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    
+    @media screen and(max-width: 960px) {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+}
+ .page-content {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 2.4rem;
+    background-color: #ffffff;
+ }
